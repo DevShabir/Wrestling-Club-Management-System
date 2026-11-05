@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Vazirmatn;
+    src: url('../fonts/Yekan.ttf') format('truetype');
+}
+
+:root {
+    /* --sidebar-bg: #111827; */
+    --sidebar-bg: #151b6c;
+    --sidebar-hover: #1f2937;
+    --sidebar-active: #2563eb;
+    --main-bg: #f8fafc;
+    --card-border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn';
+    background-color: var(--main-bg);
+    color: #1e293b;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* سایدبار سمت راست */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--sidebar-bg);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .brand {
+    padding: 20px 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 12px 10px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 4px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: var(--sidebar-hover);
+    color: #ffffff;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--sidebar-active);
+    color: #ffffff;
+}
+
+.sidebar .nav-link i {
+    font-size: 1.15rem;
+}
+
+.sidebar .user-panel {
+    padding: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* بدنه اصلی - چسبیده دقیق به سایدبار */
+.main-wrapper {
+    margin-right: 250px;
+    margin-left: 0;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg);
+}
+
+/* نوار بالای صفحه */
+.top-navbar {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.content-container {
+    padding: 24px 28px;
+    flex-grow: 1;
+}
+
+/* کارت‌های آماری */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+/* آواتار اعضا در لیست */
+.member-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.badge-status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-active {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-inactive {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.badge-pending {
+    background-color: #fef9c3;
+    color: #a16207;
+}

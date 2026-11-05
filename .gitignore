@@ -1,0 +1,18 @@
+# Uploaded member, coach, and user photos
+/uploads/*
+!/uploads/coaches/
+!/uploads/members/
+!/uploads/users/
+/uploads/coaches/*
+/uploads/members/*
+/uploads/users/*
+!/uploads/coaches/.gitkeep
+!/uploads/members/.gitkeep
+!/uploads/users/.gitkeep
+
+# Local/editor files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
